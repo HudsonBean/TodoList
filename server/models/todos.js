@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const todosSchema = new Schema({
   id: {
     type: Number,
+    required: true,
   },
   content: {
     type: String,

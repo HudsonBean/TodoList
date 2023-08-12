@@ -1,0 +1,10 @@
+GET http://localhost:8080/todos
+
+###
+
+POST http://localhost:8080/todos/new
+content-type: application/json
+
+{
+    "content": "Test3"
+}
