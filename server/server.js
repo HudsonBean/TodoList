@@ -36,3 +36,11 @@ app.post("/todos/new", async (req, res) => {
   //Response
   res.json(data);
 });
+app.patch("/todos/edit/:id", async (req, res) => {
+  //Patch data
+  const data = await todos.findByIdAndUpdate(req.params.id, {
+    $set: { content: req.body.content },
+  });
+  //Response
+  res.json(data);
+});
