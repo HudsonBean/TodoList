@@ -1,0 +1,36 @@
+//Imports
+@import "./theme";
+
+.template {
+  width: 100%;
+  height: 100vh;
+  .template__nav-bar {
+    width: 20rem;
+    height: 100vh;
+    background-color: $background2;
+    .nav-bar__banner {
+      width: 100%;
+      height: 6.5rem;
+      background-color: $theme-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .banner__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .banner__logo {
+          margin-left: 1rem;
+          margin-right: 0.5rem;
+        }
+        span {
+          font-size: 2rem;
+        }
+      }
+      .banner__settings-icon {
+        margin-right: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
