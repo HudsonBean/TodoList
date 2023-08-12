@@ -25,7 +25,7 @@ app.get("/todos", async (req, res) => {
   //Get data
   const data = await todos.find();
   //Response
-  res.json(data);
+  res.json({ todos: data });
 });
 app.post("/todos/new", async (req, res) => {
   //Post data
@@ -34,7 +34,7 @@ app.post("/todos/new", async (req, res) => {
   });
   data.save();
   //Response
-  res.json(data);
+  res.json({ todos: data });
 });
 app.patch("/todos/edit/:id", async (req, res) => {
   //Patch data
@@ -42,17 +42,17 @@ app.patch("/todos/edit/:id", async (req, res) => {
     $set: { content: req.body.content },
   });
   //Response
-  res.json(data);
+  res.json({ todos: data });
 });
 app.delete("/todos/delete", async (req, res) => {
   //Delete all data
-  const data = await todos.deleteMany({});
+  const data = todos.deleteMany({});
   //Response
-  res.json(data);
+  res.json({ todos: data });
 });
 app.delete("/todos/delete/:id", async (req, res) => {
   //Delete data
   const data = await todos.findByIdAndDelete(req.params.id);
   //Response
-  res.json(data);
+  res.json({ todos: data });
 });
