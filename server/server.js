@@ -44,6 +44,12 @@ app.patch("/todos/edit/:id", async (req, res) => {
   //Response
   res.json(data);
 });
+app.delete("/todos/delete", async (req, res) => {
+  //Delete all data
+  const data = await todos.deleteMany({});
+  //Response
+  res.json(data);
+});
 app.delete("/todos/delete/:id", async (req, res) => {
   //Delete data
   const data = await todos.findByIdAndDelete(req.params.id);

@@ -20,3 +20,7 @@ content-type: application/json
 
 ###
 DELETE http://localhost:8080/todos/delete/64d7143f48f0fed3c8f61e38
+
+###
+
+DELETE http://localhost:8080/todos/delete/
