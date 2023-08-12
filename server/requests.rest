@@ -6,7 +6,7 @@ PATCH  http://localhost:8080/todos/edit/64d7143f48f0fed3c8f61e38
 content-type: application/json
 
 {
-    "content": "Test3"
+    "content": "This has been updated"
 }
 
 ###
@@ -15,7 +15,7 @@ POST http://localhost:8080/todos/new
 content-type: application/json
 
 {
-    "content": "Test3"
+    "content": "Test2"
 }
 
 ###
