@@ -2,6 +2,14 @@ GET http://localhost:8080/todos
 
 ###
 
+PATCH  http://localhost:8080/todos/edit/1   
+
+{
+    "content": "This has been altered"
+}
+
+###
+
 POST http://localhost:8080/todos/new
 content-type: application/json
 
