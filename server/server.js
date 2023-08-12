@@ -15,3 +15,16 @@ mongoose.connect(process.env.DATABASE_URl, {
 });
 
 app.listen(process.env.PORT);
+
+//Models
+const todos = require("./models/todos");
+
+//Routing
+//todos
+app.get("/todos", async (req, res) => {
+  //Get data
+  const data = todos.find();
+  //Response
+  console.log(data);
+  res.json(data);
+});
