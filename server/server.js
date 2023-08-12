@@ -28,17 +28,8 @@ app.get("/todos", async (req, res) => {
   res.json(data);
 });
 app.post("/todos/new", async (req, res) => {
-  //Variables
-  let newId;
-  if ((await todos.find()).length == 0) {
-    newId = 0;
-  } else {
-    newId = (await todos.find({}).sort({ _id: -1 }).limit(1))[0]["id"] + 1;
-  }
-
   //Post data
   const data = new todos({
-    id: newId,
     content: req.body.content,
   });
   data.save();
