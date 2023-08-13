@@ -21,7 +21,9 @@ export const Template = () => {
           onClick={() => {
             console.log("Hello World!");
           }}
-        />
+        >
+          Hello
+        </Button>
       </nav>
     </div>
   );
