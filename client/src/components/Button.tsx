@@ -4,19 +4,19 @@ import "../styles/Button.css";
 interface Props {
   onClick: () => void;
   children?: React.ReactNode;
-  width: string;
-  height: string;
-  color: string;
-  backgroundColor: string;
-  borderRadius: string;
-  stopPropogation: boolean;
-  preventDefault: boolean;
+  width?: string;
+  height?: string;
+  color?: string;
+  backgroundColor?: string;
+  borderRadius?: string;
+  stopPropogation?: boolean;
+  preventDefault?: boolean;
 }
 
-const clickHanlder = (
+const clickHandler = (
   onClick: Function,
-  stopPropagation: boolean,
-  preventDefault: boolean
+  stopPropagation: boolean | undefined,
+  preventDefault: boolean | undefined
 ) => {
   return (e: MouseEvent) => {
     //Stop propogation
@@ -43,13 +43,13 @@ export const Button: React.FC<Props> = ({
   preventDefault,
 }) => (
   <button
-    onClick={clickHanlder(onClick, stopPropogation, preventDefault)}
+    onClick={clickHandler(onClick, stopPropogation, preventDefault)}
     style={{
-      width: width,
-      height: height,
-      color: color,
-      backgroundColor: backgroundColor,
-      borderRadius: borderRadius,
+      width: width && width,
+      height: height && height,
+      color: color && color,
+      backgroundColor: backgroundColor && backgroundColor,
+      borderRadius: borderRadius && borderRadius,
     }}
   >
     {children}

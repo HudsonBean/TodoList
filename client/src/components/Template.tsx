@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Template.css";
+import { Button } from "./Button";
 
 export const Template = () => {
   return (
@@ -16,6 +17,11 @@ export const Template = () => {
             settings
           </span>
         </div>
+        <Button
+          onClick={() => {
+            console.log("Hello World!");
+          }}
+        />
       </nav>
     </div>
   );
