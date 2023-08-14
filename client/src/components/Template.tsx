@@ -17,16 +17,17 @@ export const Template = () => {
             settings
           </span>
         </div>
-        <div className="nav-bar__create-todo-button">
+        <div className="nav-bar__create-todo-list">
           <Button
             onClick={() => {
               console.log("Hello World!");
             }}
-            width="15rem"
-            height="2rem"
-            fontSize="1.5rem"
+            className="create-todo-list__button"
           >
             Create new todo
+            <span className="material-symbols-outlined create-todo-button__plus-sign">
+              add
+            </span>
           </Button>
         </div>
         <div className="nav-bar__todo-lists">

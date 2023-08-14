@@ -4,12 +4,11 @@ import "../styles/Button.css";
 interface Props {
   onClick: () => void;
   children?: React.ReactNode;
+  className?: string;
   width?: string;
   height?: string;
   color?: string;
-  fontSize?: string;
   backgroundColor?: string;
-  borderRadius?: string;
   stopPropogation?: boolean;
   preventDefault?: boolean;
 }
@@ -35,24 +34,22 @@ const clickHandler = (
 export const Button: React.FC<Props> = ({
   onClick,
   children,
+  className,
   width,
   height,
   color,
-  fontSize,
   backgroundColor,
-  borderRadius,
   stopPropogation,
   preventDefault,
 }) => (
   <button
     onClick={clickHandler(onClick, stopPropogation, preventDefault)}
+    className={className && className}
     style={{
       width: width && width,
       height: height && height,
       color: color && color,
-      fontSize: fontSize && fontSize,
       backgroundColor: backgroundColor && backgroundColor,
-      borderRadius: borderRadius && borderRadius,
     }}
   >
     {children}

@@ -31,19 +31,39 @@
   margin-right: 1rem;
   font-size: 1.5rem;
 }
-.template .template__nav-bar .nav-bar__create-todo-button {
+.template .template__nav-bar .nav-bar__create-todo-list {
   width: 100%;
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.template .template__nav-bar .nav-bar__create-todo-list .create-todo-list__button {
+  width: 15rem;
+  height: 2rem;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2.5px solid #ffa500;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  pointer-events: all;
+}
+.template .template__nav-bar .nav-bar__create-todo-list .create-todo-list__button .create-todo-button__plus-sign {
+  margin-left: 0.25rem;
+}
+.template .template__nav-bar .nav-bar__create-todo-list .create-todo-list__button:hover {
+  background-color: transparent;
+  width: 15.25rem;
+  height: 2.15rem;
+  font-size: 1.75;
+}
 .template .template__nav-bar .nav-bar__todo-lists {
   width: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(100, 100, 100);
 }
 .template .template__nav-bar .nav-bar__todo-lists ul {
   padding: 0;
