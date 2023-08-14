@@ -11,7 +11,7 @@ export const Template = () => {
             <span className="material-symbols-outlined banner__logo">
               sweep
             </span>
-            <span>In Check</span>
+            <span className="banner__title">In Check</span>
           </div>
           <span className="material-symbols-outlined banner__settings-icon">
             settings
@@ -30,11 +30,19 @@ export const Template = () => {
             </span>
           </Button>
         </div>
-        <div className="nav-bar__todo-lists">
-          <ul>
-            <li>Placeholder</li>
-          </ul>
-        </div>
+        <ul className="nav-bar__todo-lists">
+          <li>
+            <div>
+              <span className="material-symbols-outlined todo-lists__todo-list-icon">
+                checklist
+              </span>
+              <span>TodoList1</span>
+            </div>
+            <span className="todo-lists__todo-list-date">
+              August 5, 2023, 1:15 AM
+            </span>
+          </li>
+        </ul>
       </nav>
     </div>
   );

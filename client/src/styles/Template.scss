@@ -19,12 +19,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .banner__logo {
-          margin-left: 1rem;
-          margin-right: 0.5rem;
-        }
+        font-weight: 690;
+        text-transform: uppercase;
         span {
           font-size: 2rem;
+        }
+        .banner__logo {
+          margin-left: 1.5rem;
+          margin-right: 0.5rem;
+        }
+        .banner__title {
+          margin-left: 0.25rem;
         }
       }
       .banner__settings-icon {
@@ -62,13 +67,23 @@
       }
     }
     .nav-bar__todo-lists {
+      padding: 0;
       width: 20rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      ul {
-        padding: 0;
-        width: 85%;
+      list-style-type: none;
+      li {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.5rem;
+        font-weight: 0;
+        margin: 0rem 0rem 1.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .todo-lists__todo-list-icon {
+        margin-right: 0.35rem;
+      }
+      .todo-lists__todo-list-date {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 20px;
       }
     }
   }

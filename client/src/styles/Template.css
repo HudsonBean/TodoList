@@ -19,13 +19,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.template .template__nav-bar .nav-bar__banner .banner__title .banner__logo {
-  margin-left: 1rem;
-  margin-right: 0.5rem;
+  font-weight: 690;
+  text-transform: uppercase;
 }
 .template .template__nav-bar .nav-bar__banner .banner__title span {
   font-size: 2rem;
+}
+.template .template__nav-bar .nav-bar__banner .banner__title .banner__logo {
+  margin-left: 1.5rem;
+  margin-right: 0.5rem;
+}
+.template .template__nav-bar .nav-bar__banner .banner__title .banner__title {
+  margin-left: 0.25rem;
 }
 .template .template__nav-bar .nav-bar__banner .banner__settings-icon {
   margin-right: 1rem;
@@ -60,12 +65,22 @@
   font-size: 1.75;
 }
 .template .template__nav-bar .nav-bar__todo-lists {
-  width: 20rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.template .template__nav-bar .nav-bar__todo-lists ul {
   padding: 0;
-  width: 85%;
+  width: 20rem;
+  list-style-type: none;
+}
+.template .template__nav-bar .nav-bar__todo-lists li {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  font-weight: 0;
+  margin: 0rem 0rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.template .template__nav-bar .nav-bar__todo-lists .todo-lists__todo-list-icon {
+  margin-right: 0.35rem;
+}
+.template .template__nav-bar .nav-bar__todo-lists .todo-lists__todo-list-date {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
 }/*# sourceMappingURL=Template.css.map */
