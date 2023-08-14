@@ -1,8 +1,9 @@
-import React from "react";
+import React, { createRef } from "react";
 import "../styles/Template.css";
 import { Button } from "./Button";
 
 export const Template = () => {
+  const moreOptionsRef: React.RefObject<HTMLInputElement> = createRef();
   return (
     <div className="template">
       <nav className="template__nav-bar">
@@ -31,15 +32,30 @@ export const Template = () => {
           </Button>
         </div>
         <ul className="nav-bar__todo-lists">
-          <li>
-            <div>
-              <span className="material-symbols-outlined todo-lists__todo-list-icon">
-                checklist
+          <li
+            onMouseEnter={() => {
+              moreOptionsRef.current?.classList.remove("hidden");
+            }}
+            onMouseLeave={() => {
+              moreOptionsRef.current?.classList.add("hidden");
+            }}
+          >
+            <div className="todo-lists__data-wrapper">
+              <div className="todo-lists__asthetics-wrapper">
+                <span className="material-symbols-outlined todo-lists__todo-list-icon">
+                  checklist
+                </span>
+                <span className="todo-lists__todo-list-name">TodoList1</span>
+              </div>
+              <span className="todo-lists__todo-list-date">
+                August 5, 2023, 1:15 AM
               </span>
-              <span>TodoList1</span>
             </div>
-            <span className="todo-lists__todo-list-date">
-              August 5, 2023, 1:15 AM
+            <span
+              ref={moreOptionsRef}
+              className="material-symbols-outlined todo-lists__more-icon hidden"
+            >
+              more_vert
             </span>
           </li>
         </ul>

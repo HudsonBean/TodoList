@@ -1,6 +1,13 @@
 //Imports
 @import "./theme";
 
+.hidden {
+  visibility: hidden;
+}
+.material-symbols-outlined {
+  user-select: none;
+}
+
 .template {
   width: 100%;
   height: 100vh;
@@ -29,6 +36,7 @@
           margin-right: 0.5rem;
         }
         .banner__title {
+          user-select: none;
           margin-left: 0.25rem;
         }
       }
@@ -63,6 +71,7 @@
           width: 15.25rem;
           height: 2.15rem;
           font-size: 1.75;
+          border-radius: 12.5px;
         }
       }
     }
@@ -76,14 +85,33 @@
         font-weight: 0;
         margin: 0rem 0rem 1.5rem 1.5rem;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+      }
+      .todo-lists__data-wrapper {
+        width: 12.5rem;
+      }
+      .todo-lists__asthetics-wrapper {
+        display: flex;
+        align-items: center;
       }
       .todo-lists__todo-list-icon {
         margin-right: 0.35rem;
       }
+      .todo-lists__todo-list-name {
+        width: 100%;
+        text-overflow: clip;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       .todo-lists__todo-list-date {
         color: rgba(255, 255, 255, 0.5);
         font-size: 20px;
+      }
+      .todo-lists__more-icon {
+        margin: 0rem 1rem 0rem auto;
+        font-size: 1.69rem;
+        user-select: none;
       }
     }
   }
