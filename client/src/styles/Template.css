@@ -30,4 +30,22 @@
 .template .template__nav-bar .nav-bar__banner .banner__settings-icon {
   margin-right: 1rem;
   font-size: 1.5rem;
+}
+.template .template__nav-bar .nav-bar__create-todo-button {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.template .template__nav-bar .nav-bar__todo-lists {
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(100, 100, 100);
+}
+.template .template__nav-bar .nav-bar__todo-lists ul {
+  padding: 0;
+  width: 85%;
 }/*# sourceMappingURL=Template.css.map */

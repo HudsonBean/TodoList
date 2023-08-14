@@ -7,6 +7,7 @@ interface Props {
   width?: string;
   height?: string;
   color?: string;
+  fontSize?: string;
   backgroundColor?: string;
   borderRadius?: string;
   stopPropogation?: boolean;
@@ -37,6 +38,7 @@ export const Button: React.FC<Props> = ({
   width,
   height,
   color,
+  fontSize,
   backgroundColor,
   borderRadius,
   stopPropogation,
@@ -48,6 +50,7 @@ export const Button: React.FC<Props> = ({
       width: width && width,
       height: height && height,
       color: color && color,
+      fontSize: fontSize && fontSize,
       backgroundColor: backgroundColor && backgroundColor,
       borderRadius: borderRadius && borderRadius,
     }}
