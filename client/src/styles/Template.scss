@@ -14,6 +14,10 @@
   .template__nav-bar {
     width: 20rem;
     height: 100vh;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
     background-color: $background2;
     .nav-bar__banner {
       width: 100%;

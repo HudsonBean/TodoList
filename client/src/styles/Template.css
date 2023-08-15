@@ -15,7 +15,11 @@
 .template .template__nav-bar {
   width: 20rem;
   height: 100vh;
+  overflow-y: scroll;
   background-color: rgb(75, 75, 75);
+}
+.template .template__nav-bar::-webkit-scrollbar {
+  width: 0;
 }
 .template .template__nav-bar .nav-bar__banner {
   width: 100%;

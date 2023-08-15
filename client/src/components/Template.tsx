@@ -1,9 +1,20 @@
-import React, { createRef } from "react";
+import React from "react";
 import "../styles/Template.css";
 import { Button } from "./Button";
 
 export const Template = () => {
-  const moreOptionsRef: React.RefObject<HTMLInputElement> = createRef();
+  const mouseEnterHandler = (e: React.MouseEvent | any) => {
+    const element: HTMLElement = e.target.getElementsByClassName(
+      "todo-lists__more-icon"
+    )[0];
+    element.classList.remove("hidden");
+  };
+  const mouseLeaveHandler = (e: React.MouseEvent | any) => {
+    const element: HTMLElement = e.target.getElementsByClassName(
+      "todo-lists__more-icon"
+    )[0];
+    element.classList.add("hidden");
+  };
   return (
     <div className="template">
       <nav className="template__nav-bar">
@@ -32,14 +43,7 @@ export const Template = () => {
           </Button>
         </div>
         <ul className="nav-bar__todo-lists">
-          <li
-            onMouseEnter={() => {
-              moreOptionsRef.current?.classList.remove("hidden");
-            }}
-            onMouseLeave={() => {
-              moreOptionsRef.current?.classList.add("hidden");
-            }}
-          >
+          <li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
             <div className="todo-lists__data-wrapper">
               <div className="todo-lists__asthetics-wrapper">
                 <span className="material-symbols-outlined todo-lists__todo-list-icon">
@@ -51,10 +55,23 @@ export const Template = () => {
                 August 5, 2023, 1:15 AM
               </span>
             </div>
-            <span
-              ref={moreOptionsRef}
-              className="material-symbols-outlined todo-lists__more-icon hidden"
-            >
+            <span className="material-symbols-outlined todo-lists__more-icon hidden">
+              more_vert
+            </span>
+          </li>
+          <li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
+            <div className="todo-lists__data-wrapper">
+              <div className="todo-lists__asthetics-wrapper">
+                <span className="material-symbols-outlined todo-lists__todo-list-icon">
+                  checklist
+                </span>
+                <span className="todo-lists__todo-list-name">SchoolStuff</span>
+              </div>
+              <span className="todo-lists__todo-list-date">
+                January 18, 2019, 3:05 PM
+              </span>
+            </div>
+            <span className="material-symbols-outlined todo-lists__more-icon hidden">
               more_vert
             </span>
           </li>
