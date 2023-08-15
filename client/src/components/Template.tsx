@@ -4,13 +4,13 @@ import { Button } from "./Button";
 
 export const Template = () => {
   const mouseEnterHandler = (e: React.MouseEvent | any) => {
-    const element: HTMLElement = e.target.getElementsByClassName(
+    const element: HTMLElement = e.currentTarget.getElementsByClassName(
       "todo-lists__more-icon"
     )[0];
     element.classList.remove("hidden");
   };
   const mouseLeaveHandler = (e: React.MouseEvent | any) => {
-    const element: HTMLElement = e.target.getElementsByClassName(
+    const element: HTMLElement = e.currentTarget.getElementsByClassName(
       "todo-lists__more-icon"
     )[0];
     element.classList.add("hidden");
