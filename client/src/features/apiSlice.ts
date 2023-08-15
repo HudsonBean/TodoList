@@ -8,7 +8,14 @@ export const api = createApi({
     getAllTodos: builder.query<todos, undefined>({
       query: () => "/todos",
     }),
+    createTodo: builder.mutation<object, undefined>({
+      query: (message: any) => ({
+        url: "/todos/new",
+        method: "POST",
+        body: { content: message },
+      }),
+    }),
   }),
 });
 
-export const { useGetAllTodosQuery } = api;
+export const { useGetAllTodosQuery, useCreateTodoMutation } = api;

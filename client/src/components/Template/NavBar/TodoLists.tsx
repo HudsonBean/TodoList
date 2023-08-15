@@ -31,22 +31,6 @@ export const TodoLists = () => {
           more_vert
         </span>
       </li>
-      <li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-        <div className="todo-lists__data-wrapper">
-          <div className="todo-lists__asthetics-wrapper">
-            <span className="material-symbols-outlined todo-lists__todo-list-icon">
-              checklist
-            </span>
-            <span className="todo-lists__todo-list-name">SchoolStuff</span>
-          </div>
-          <span className="todo-lists__todo-list-date">
-            January 18, 2019, 3:05 PM
-          </span>
-        </div>
-        <span className="material-symbols-outlined todo-lists__more-icon hidden">
-          more_vert
-        </span>
-      </li>
     </ul>
   );
 };
