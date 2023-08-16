@@ -6,6 +6,9 @@ const todosSchema = new Schema({
     type: String,
     required: true,
   },
+  date: {
+    type: Date,
+  },
 });
 
 const todo = mongoose.model("todo", todosSchema);

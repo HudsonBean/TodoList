@@ -3,7 +3,7 @@ import { Button } from "../../Button";
 import { useCreateTodoMutation } from "../../../features/apiSlice";
 
 const createNewListELement: React.FC<undefined> = () => {
-  return <li></li>;
+  return <form></form>;
 };
 
 {

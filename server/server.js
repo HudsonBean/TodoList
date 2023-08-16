@@ -31,6 +31,7 @@ app.post("/todos/new", async (req, res) => {
   //Post data
   const data = new todos({
     content: req.body.content,
+    date: new Date(),
   });
   data.save();
   //Response
